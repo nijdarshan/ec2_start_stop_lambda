@@ -26,6 +26,6 @@ def lambda_handler(pr, context):
     
     if len(stoppedInstances) > 0:
         startingUp = ec2.instances.filter(InstanceIds=stoppedInstances).start()
-        print (f"Starting {len(stoppedInstances)} {client_name} instances with ID - {stoppedInstances}")
+        print(f"Starting {len(stoppedInstances)} {client_name} instances with ID - {stoppedInstances}")
     else:
-        printcli
+        print(f"There are no instances stopped with Client name {client_name}")
